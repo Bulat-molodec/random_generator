@@ -1,0 +1,12 @@
+body {
+	background: linear-gradient(90deg, #f598a8, #f6edb2);
+}
+.form-inline {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.form-group {
+    margin-right: 10px;
+}

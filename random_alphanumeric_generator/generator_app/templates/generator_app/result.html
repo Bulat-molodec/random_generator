@@ -1,0 +1,50 @@
+{% extends "generator_app/base.html" %}
+
+{% block title %}Генератор паролей - Результат{% endblock%}
+{% block content %}
+{% load static %}
+
+<body>
+<div class="container">
+    <br>
+    <h4 align="center" style="font-family: Trebuchet MS;">Сгенерированный пароль:</h4>
+    <br>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col" align="center">
+            Рекламма 1
+        </div>
+        <div class="col-md-6" align="center">
+            <form action="{% url 'generator_app:index' %}" method="post">
+                {% csrf_token %}
+                <p id="generated-string">{{ random_alphanumeric_string }}</p>
+                <button type="button" class="btn btn-success" onclick="copyToClipboard()">Скопировать в буфер обмена
+                </button>
+
+                <button type="submit" class="btn btn-warning">Сгенерировать другой пароль</button>
+            </form>
+            <script>
+                function copyToClipboard() {
+                    var generatedStringElement = document.getElementById("generated-string");
+                    var textArea = document.createElement("textarea");
+
+                    textArea.value = generatedStringElement.textContent;
+
+                    document.body.appendChild(textArea);
+
+                    textArea.select();
+                    document.execCommand("copy");
+                    document.body.removeChild(textArea);
+                }
+
+            </script>
+        </div>
+        <div class="col" align="center">
+            Рекламма 2
+        </div>
+    </div>
+</div>
+</body>
+</html>
+{% endblock %}
