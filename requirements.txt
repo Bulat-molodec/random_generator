@@ -1,0 +1,14 @@
+asgiref      3.7.2
+automium     0.2.6
+automium-web 0.1.1
+colorama     0.4.6
+Django       4.2.3
+Jinja2       3.1.2
+legacy       0.1.6
+pep8         1.7.1
+pip          23.2.1
+setuptools   65.5.1
+sqlparse     0.4.4
+tzdata       2023.3
+views        0.3
+wheel        0.38.4
